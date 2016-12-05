@@ -10,6 +10,9 @@ ENV PROJECT_PATH=/var/www \
     MYSQL_ROOT_PASSWORD=pornfood \
     TERM=xterm
 
+RUN (echo 'phpmyadmin phpmyadmin/dbconfig-install boolean true' | debconf-set-selections)
+RUN (echo 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2' | debconf-set-selections)
+
 RUN apt-get update -q && apt-get upgrade -yqq
 
 # Utilities, Apache, PHP, and supplementary programs
