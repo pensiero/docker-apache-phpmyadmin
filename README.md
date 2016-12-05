@@ -1,2 +1,2 @@
-# docker-mysql-phpmyadmin
-Docker container with Mysql and phpMyAdmin
+# docker-apache-phpmyadmin
+Docker container with Apache, PHP7 and phpMyAdmin
